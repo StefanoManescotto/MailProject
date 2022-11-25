@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="453.0" prefWidth="774.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.java_mailclient.Model.MailSenderController">
+   <top>
+      <VBox fx:id="vBox" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="138.0" BorderPane.alignment="TOP_LEFT">
+         <children>
+            <BorderPane VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <left>
+                  <ImageView fitHeight="39.0" fitWidth="42.0" onMouseClicked="#onBackClick" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@Images/back_arrow.png" />
+                     </image>
+                  </ImageView>
+               </left>
+               <right>
+                  <Button id="write-button" mnemonicParsing="false" stylesheets="@buttonStyles.css" text="Send" textAlignment="CENTER" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets right="20.0" />
+                     </BorderPane.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow>
+                           <color>
+                              <Color opacity="0.7137404680252075" />
+                           </color>
+                        </InnerShadow>
+                     </effect>
+                  </Button>
+               </right>
+            </BorderPane>
+            <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="82.0" style="-fx-font-weight: bold;" text="From:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField id="txtfield-send" fx:id="mailFrom" maxWidth="1.7976931348623157E308" prefHeight="32.0" prefWidth="550.0" stylesheets="@buttonStyles.css" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="600.0">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="82.0" style="-fx-font-weight: bold;" text="To:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField id="txtfield-send" fx:id="mailTo" maxWidth="1.7976931348623157E308" prefHeight="32.0" prefWidth="550.0" stylesheets="@buttonStyles.css" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="600.0">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="81.0" style="-fx-font-weight: bold;" text="Subject:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField id="txtfield-send" fx:id="mailSubject" maxWidth="1.7976931348623157E308" prefHeight="32.0" prefWidth="550.0" stylesheets="@buttonStyles.css" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets left="10.0" top="5.0" />
+         </BorderPane.margin>
+      </VBox>
+   </top>
+   <center>
+      <TextArea fx:id="mailBody" centerShape="false" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="300.0" prefWidth="650.0" scaleShape="false" wrapText="true" BorderPane.alignment="TOP_LEFT">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <padding>
+            <Insets right="10.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets top="10.0" />
+         </BorderPane.margin>
+      </TextArea>
+   </center>
+</BorderPane>

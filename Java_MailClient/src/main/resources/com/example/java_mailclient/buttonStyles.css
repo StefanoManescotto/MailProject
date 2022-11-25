@@ -10,3 +10,20 @@
 #my-button:pressed {
     -fx-background-color: #494d52;
 }
+
+#write-button {
+    -fx-text-fill: black;
+    -fx-background-color: #3b86ff;
+}
+
+#write-button:hover {
+    -fx-background-color: #216ed3;
+}
+
+#write-button:pressed {
+    -fx-background-color: #69a0f5;
+}
+
+#txtfield-send{
+    -fx-border-color: white white black white;
+}
