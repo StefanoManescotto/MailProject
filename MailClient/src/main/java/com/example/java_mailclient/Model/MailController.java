@@ -1,6 +1,7 @@
 package com.example.java_mailclient.Model;
 
 import com.example.java_mailclient.MailApplication;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -9,7 +10,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 
-import java.io.IOException;
+import java.io.*;
 
 public class MailController {
     @FXML
@@ -59,7 +60,8 @@ public class MailController {
     }
 
     @FXML
-    protected void onSendButtonClick(){
+    protected void onSendButtonClick() {
+        ((MailSenderController) mailSenderLoader.getController()).clearText();
         borderPane.setCenter(mailSenderLoader.getRoot());
     }
 

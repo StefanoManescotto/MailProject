@@ -4,8 +4,13 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.example.ServerRequest;
+import org.example.ServerResponse;
 
-import java.io.IOException;
+
+import java.io.*;
+import java.net.ServerSocket;
+import java.net.Socket;
 
 public class MailApplication extends Application {
     @Override
