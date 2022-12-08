@@ -5,7 +5,7 @@ import javafx.beans.binding.StringBinding;
 public class ObservableStringBuffer extends StringBinding {
     private final StringBuffer buffer = new StringBuffer();
     private int nLines = 0;
-    private final int MAX_LINES = 20;
+    private final int MAX_LINES = 50;
 
     @Override
     protected String computeValue() {

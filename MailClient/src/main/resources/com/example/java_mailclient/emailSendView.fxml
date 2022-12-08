@@ -14,7 +14,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="453.0" prefWidth="774.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.java_mailclient.Model.MailSenderController">
+<BorderPane prefHeight="453.0" prefWidth="774.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.java_mailclient.controller.MailSenderController">
    <top>
       <VBox fx:id="vBox" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="138.0" BorderPane.alignment="TOP_LEFT">
          <children>
@@ -54,7 +54,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField id="txtfield-send" fx:id="mailFrom" maxWidth="1.7976931348623157E308" prefHeight="32.0" prefWidth="550.0" stylesheets="@buttonStyles.css" HBox.hgrow="ALWAYS">
+                  <TextField id="txtfield-send" fx:id="mailFrom" editable="false" maxWidth="1.7976931348623157E308" prefHeight="32.0" prefWidth="550.0" stylesheets="@buttonStyles.css" HBox.hgrow="ALWAYS">
                      <font>
                         <Font size="14.0" />
                      </font>

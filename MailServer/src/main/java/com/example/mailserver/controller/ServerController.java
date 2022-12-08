@@ -20,8 +20,7 @@ public class ServerController {
     }
 
     private void logAutoScroll(){
-        log.selectPositionCaret(log.getLength());
-        log.deselect();
+        log.setScrollTop(Double.MAX_VALUE);
     }
 
     @FXML

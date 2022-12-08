@@ -5,9 +5,9 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-
 
 <VBox alignment="CENTER" minHeight="200.0" minWidth="400.0" prefHeight="323.0" prefWidth="537.0" spacing="20.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mailserver.controller.ServerController">
     <padding>
@@ -17,20 +17,24 @@
       <children>
          <Label fx:id="welcomeText1" prefHeight="27.0" prefWidth="370.0" text="Server Log">
             <font>
-               <Font size="16.0" />
+               <Font size="20.0" />
             </font>
          </Label>
-         <Button fx:id="serverBtn" mnemonicParsing="false" onMouseClicked="#onServerStateButtonClick" prefHeight="25.0" prefWidth="134.0" text="Start Server" />
+         <Region maxWidth="1.7976931348623157E308" prefHeight="35.0" prefWidth="39.0" HBox.hgrow="ALWAYS" />
+         <Button fx:id="serverBtn" mnemonicParsing="false" onMouseClicked="#onServerStateButtonClick" prefHeight="25.0" prefWidth="134.0" text="Start Server">
+            <font>
+               <Font size="16.0" />
+            </font></Button>
       </children>
    </HBox>
-   <TextArea fx:id="log" editable="false" prefHeight="401.0" prefWidth="497.0">
+   <TextArea fx:id="log" editable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
       <font>
          <Font size="16.0" />
       </font>
    </TextArea>
-   <Button mnemonicParsing="false" text="Clean" textAlignment="CENTER" onMouseClicked="#onCleanButtonClick">
+   <Button mnemonicParsing="false" onMouseClicked="#onCleanButtonClick" text="Clean" textAlignment="CENTER">
       <font>
-         <Font size="15.0" />
+         <Font size="16.0" />
       </font>
    </Button>
 </VBox>

@@ -3,12 +3,14 @@ package org.example;
 import java.io.Serializable;
 
 public class ServerResponse implements Serializable {
-    public static enum Type{
+    public enum Type{
         OK,
         ADDRESS_UNKNOWN,
-        NOT_AN_EMAIL,
+        NOT_A_EMAIL,
         SENT,
-        BAD_REQUEST
+        RMVD,
+        BAD_REQUEST,
+        SERVER_OFFLINE
     }
 
     private String clientMail;

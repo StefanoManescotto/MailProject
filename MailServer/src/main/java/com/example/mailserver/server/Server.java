@@ -1,6 +1,7 @@
 package com.example.mailserver.server;
 
 import com.example.mailserver.ServerMain;
+import com.example.mailserver.server.datamanager.MailManager;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -12,7 +13,9 @@ public class Server {
 
     private final ServerSocket serverSocket = new ServerSocket(Configs.PORT);
     private final ExecutorService executor = Executors.newFixedThreadPool(Configs.THREAD_NUM);
+    private MailManager mailManager = new MailManager();
     public Server() throws IOException {
+
     }
 
     public void start(){
@@ -21,7 +24,7 @@ public class Server {
             while(!Thread.interrupted()){
                 Socket incoming = serverSocket.accept();
                 incoming.setSoTimeout(10000);
-                executor.execute(new ServerConnection(incoming));
+                executor.execute(new ServerConnection(incoming, mailManager));
             }
         } catch (IOException e) {
             ServerMain.addLog(e.getMessage());
@@ -41,6 +44,7 @@ public class Server {
                 executor.shutdown();
             }
         } catch (IOException e) {
+            System.out.println("ERR 3");
             throw new RuntimeException(e);
         }
     }

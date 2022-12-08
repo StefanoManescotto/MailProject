@@ -24,6 +24,19 @@
     -fx-background-color: #69a0f5;
 }
 
+#delete-button {
+    -fx-text-fill: black;
+    -fx-background-color: #f11b1b;
+}
+
+#delete-button:hover {
+    -fx-background-color: #c41515;
+}
+
+#delete-button:pressed {
+    -fx-background-color: #fd3030;
+}
+
 #txtfield-send{
     -fx-border-color: white white black white;
 }

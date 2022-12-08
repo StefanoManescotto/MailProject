@@ -3,6 +3,7 @@ package com.example.mailserver;
 import com.example.mailserver.controller.ServerController;
 import com.example.mailserver.server.Server;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -15,7 +16,7 @@ public class ServerMain extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(ServerMain.class.getResource("hello-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(ServerMain.class.getResource("server_log_view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1080, 780);
         stage.setTitle("Server Status");
         stage.setScene(scene);
@@ -43,7 +44,6 @@ public class ServerMain extends Application {
 
     public static void stopServer(){
         if(tServer != null && tServer.isAlive()){
-            // tServer.interrupt(); TODO: rimuovere (?)
             server.stopServer();
         }
     }
@@ -53,6 +53,6 @@ public class ServerMain extends Application {
     }
 
     public static void addLog(String sLog){
-        ServerController.logText.addLine(sLog);
+        Platform.runLater(() -> ServerController.logText.addLine(sLog));
     }
 }

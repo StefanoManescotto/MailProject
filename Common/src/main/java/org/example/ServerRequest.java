@@ -3,9 +3,11 @@ package org.example;
 import java.io.Serializable;
 
 public class ServerRequest implements Serializable {
-    public static enum Type{
+    public enum Type{
+        AUTHENTICATE,
         SEND_EMAIL,
-        RCV_LIST_EMAILS,
+        RCV_INBOX_EMAILS,
+        RCV_SENT_EMAILS,
         RMV_EMAIL
     }
 
